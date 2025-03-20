@@ -38,7 +38,7 @@ We aim to optimize the Notification Engine by addressing the following key quest
 
 ## Environment setup
 
-1. Install Docker Desktop
+### 1. Install Docker Desktop
 
 In case of Windows runs always outside of WSL
 
@@ -50,7 +50,7 @@ You can use `Kubeadm` as provisioning method.
 
 Wait until you see "Kubernetes running" in status bar of Docker Desktop.
 
-2. Install kubectl
+### 2. Install `kubectl`
 
 Linux / Windows (WSL):
 
@@ -75,7 +75,7 @@ kubectl get node
 
 [Source](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
-3. Install Helm
+### 3. Install Helm
 
 Linux / Windows (WSL):
 
@@ -95,7 +95,7 @@ Verify
 helm version
 ```
 
-4. Configure VSCode
+### 4. Configure VSCode
 
 To set up VSCode for Kubernetes, install the `ms-kubernetes-tools.vscode-kubernetes-tools` extension.
 This is an official Kubernetes extension published by Microsoft.
