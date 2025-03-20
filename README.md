@@ -95,6 +95,8 @@ Verify
 helm version
 ```
 
+[Source](https://helm.sh/docs/intro/install/)
+
 ### 4. Configure VSCode
 
 To set up VSCode for Kubernetes, install the `ms-kubernetes-tools.vscode-kubernetes-tools` extension.
@@ -106,5 +108,3 @@ After setting it up, you should see the `docker-desktop` cluster available and b
 - `kube-node-lease`
 - `kube-public`
 - `kube-system`
-
-[Source](https://helm.sh/docs/intro/install/)
