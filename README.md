@@ -35,3 +35,76 @@ We aim to optimize the Notification Engine by addressing the following key quest
 - What mechanisms can be implemented to ensure system reliability in case of partial failures?
 - How does the system recover from message queue failures, database downtimes, or network outages?
 - What redundancy and failover strategies should be in place to minimize downtime?
+
+## Environment setup
+
+1. Install Docker Desktop
+
+In case of Windows runs always outside of WSL
+
+https://www.docker.com/products/docker-desktop/
+
+Enable Kubenetes under Settings > Kubenetes > Enable Kubernetes
+
+You can use `Kubeadm` as provisioning method.
+
+Wait until you see "Kubernetes running" in status bar of Docker Desktop.
+
+2. Install kubectl
+
+Linux / Windows (WSL):
+
+```bash
+snap install kubectl --classic
+```
+
+macOS:
+
+Make sure you have [`Homebrew`](https://brew.sh/) installed.
+
+```bash
+brew install kubectl
+```
+
+Verify
+
+```bash
+kubectl version --client
+kubectl get node
+```
+
+[Source](https://kubernetes.io/docs/tasks/tools/#kubectl)
+
+3. Install Helm
+
+Linux / Windows (WSL):
+
+```bash
+sudo snap install helm --classic
+```
+
+macOS:
+
+```bash
+brew install helm
+```
+
+Verify
+
+```bash
+helm version
+```
+
+4. Configure VSCode
+
+To set up VSCode for Kubernetes, install the `ms-kubernetes-tools.vscode-kubernetes-tools` extension.
+This is an official Kubernetes extension published by Microsoft.
+In extension context menu make sure the kubeconfig is set correctly.
+The kubeconfig file is typically located at `~/.kube/config`.
+After setting it up, you should see the `docker-desktop` cluster available and be able to explore namespaces such as:
+- default
+- kube-node-lease
+- kube-public
+- kube-system
+
+[Source](https://helm.sh/docs/intro/install/)
