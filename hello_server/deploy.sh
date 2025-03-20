@@ -1,3 +1,5 @@
+#!/bin/bash
+
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 docker build -t hello_server $SCRIPT_DIR
@@ -8,7 +10,9 @@ helm upgrade \
   --force \
   --namespace demo \
   --set image=hello_server:latest \
-  --set imagePullPolicy=Never \
+  --set servicePort=3080 \
+  --set imagePullPolicy=Never `# needed only for local development` \
+  --set serviceType=LoadBalancer `# needed only for local development` \
   --wait \
   --timeout 40s \
   hello-server \
