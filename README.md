@@ -102,9 +102,9 @@ This is an official Kubernetes extension published by Microsoft.
 In extension context menu make sure the kubeconfig is set correctly.
 The kubeconfig file is typically located at `~/.kube/config`.
 After setting it up, you should see the `docker-desktop` cluster available and be able to explore namespaces such as:
-- default
-- kube-node-lease
-- kube-public
-- kube-system
+- `default`
+- `kube-node-lease`
+- `kube-public`
+- `kube-system`
 
 [Source](https://helm.sh/docs/intro/install/)
