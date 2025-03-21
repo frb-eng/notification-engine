@@ -17,3 +17,5 @@ helm upgrade \
   --timeout 40s \
   hello-server \
   $SCRIPT_DIR/../helm_charts/node_app
+
+echo hello_server deployed successfully to https://localhost:3080
