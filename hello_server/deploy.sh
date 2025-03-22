@@ -17,9 +17,7 @@ helm upgrade \
   --force \
   --namespace demo \
   --set image=hello_server:latest \
-  --set servicePort=3080 \
   --set imagePullPolicy=Never `# needed only for local development` \
-  --set serviceType=LoadBalancer `# needed only for local development` \
   --set replicaCount=5 \
   --set env.IMAGE_HASH=$IMAGE_HASH `# forces new deployment in case image hash changed` \
   --wait \
@@ -27,4 +25,4 @@ helm upgrade \
   hello-server \
   $SCRIPT_DIR/../helm_charts/node_app
 
-echo hello_server deployed successfully to https://localhost:3080
+echo hello_server deployed successfully to https://localhost

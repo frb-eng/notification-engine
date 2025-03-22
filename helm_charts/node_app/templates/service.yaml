@@ -8,7 +8,7 @@ metadata:
 spec:
   type: {{ .Values.serviceType }}
   ports:
-    - port: {{ required "appPort value is required!" .Values.servicePort }}
+    - port: 8080
       targetPort: http
       protocol: TCP
       name: http

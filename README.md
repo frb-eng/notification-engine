@@ -108,3 +108,9 @@ After setting it up, you should see the `docker-desktop` cluster available and b
 - `kube-node-lease`
 - `kube-public`
 - `kube-system`
+
+### 5. Install ingress controller
+
+```bash
+./deploy_ingress_controller.sh
+```
