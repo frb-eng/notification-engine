@@ -114,3 +114,8 @@ After setting it up, you should see the `docker-desktop` cluster available and b
 ```bash
 ./deploy_ingress_controller.sh
 ```
+
+## Resources
+
+- [Ingress-Nginx Controller](https://kubernetes.github.io/ingress-nginx/)
+- [Session Affinity](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/annotations/#session-affinity)
