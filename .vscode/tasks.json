@@ -6,6 +6,16 @@
             "type": "shell",
             "command": "hello_server/deploy.sh",
             "problemMatcher": []
-        }
+        },
+        {
+            "type": "shell",
+            "command": "bash",
+            "label": "Install dependencies",
+            "args": ["install_dependencies.sh"],
+            "options": {
+              "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+          },
     ]
 }
