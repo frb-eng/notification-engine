@@ -50,7 +50,11 @@ You can use `Kubeadm` as provisioning method.
 
 Wait until you see "Kubernetes running" in status bar of Docker Desktop.
 
-### 2. Install `kubectl`
+### 2. Install Dependencies (Ubuntu)
+
+For Ubuntu developers, after installing Docker Desktop, you can use the `install_dependencies.sh` bash script or the "Install dependencies" VS Code task to set up the required dependencies. This simplifies the setup process and ensures all necessary components are installed.
+
+### 3. Install `kubectl` (covered by install dependencies for Ubuntu)
 
 Linux / Windows (WSL):
 
@@ -75,7 +79,7 @@ kubectl get node
 
 [Source](https://kubernetes.io/docs/tasks/tools/#kubectl)
 
-### 3. Install Helm
+### 4. Install Helm (covered by install dependencies for Ubuntu)
 
 Linux / Windows (WSL):
 
@@ -97,7 +101,7 @@ helm version
 
 [Source](https://helm.sh/docs/intro/install/)
 
-### 4. Configure VSCode
+### 5. Configure VSCode
 
 To set up VSCode for Kubernetes, install the `ms-kubernetes-tools.vscode-kubernetes-tools` extension.
 This is an official Kubernetes extension published by Microsoft.
@@ -109,10 +113,10 @@ After setting it up, you should see the `docker-desktop` cluster available and b
 - `kube-public`
 - `kube-system`
 
-### 5. Install ingress controller
+### 6. Install ingress controller
 
 ```bash
-./deploy_ingress_controller.sh
+./install_dependencies.sh
 ```
 
 ## Resources
